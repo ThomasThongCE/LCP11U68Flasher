@@ -1,0 +1,17 @@
+# ninja log v5
+0	306	1560908534	CMakeFiles/native-lib.dir/native-lib.cpp.o	7a60ebe8efcc9954
+306	454	1560908534	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	2a2d06700dbb0bc2
+0	612	1560940014	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	2a2d06700dbb0bc2
+1	22	1560941292	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	2a2d06700dbb0bc2
+0	2465	1561004647	CMakeFiles/native-lib.dir/native-lib.cpp.o	7a60ebe8efcc9954
+2465	3300	1561004648	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	2a2d06700dbb0bc2
+0	302	1561004972	CMakeFiles/native-lib.dir/native-lib.cpp.o	7a60ebe8efcc9954
+302	347	1561004972	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	2a2d06700dbb0bc2
+1	288	1561006993	CMakeFiles/native-lib.dir/native-lib.cpp.o	7a60ebe8efcc9954
+288	308	1561006993	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	2a2d06700dbb0bc2
+1	2513	1561011265	CMakeFiles/native-lib.dir/native-lib.cpp.o	7a60ebe8efcc9954
+2513	3122	1561011266	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	2a2d06700dbb0bc2
+21	416	1561015450	CMakeFiles/native-lib.dir/native-lib.cpp.o	7a60ebe8efcc9954
+416	881	1561015451	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	2a2d06700dbb0bc2
+3	1946	1561020502	CMakeFiles/native-lib.dir/native-lib.cpp.o	7a60ebe8efcc9954
+1946	2539	1561020503	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	2a2d06700dbb0bc2

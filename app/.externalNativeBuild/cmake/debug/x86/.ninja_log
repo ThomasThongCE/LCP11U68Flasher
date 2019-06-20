@@ -1,0 +1,11 @@
+# ninja log v5
+0	294	1560908533	CMakeFiles/native-lib.dir/native-lib.cpp.o	b4bd814c24fb255c
+294	422	1560908533	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	10eee25a98fc63db
+1	544	1560940012	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	10eee25a98fc63db
+0	23	1560941292	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	10eee25a98fc63db
+1	416	1561006680	CMakeFiles/native-lib.dir/native-lib.cpp.o	b4bd814c24fb255c
+416	1005	1561006681	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	10eee25a98fc63db
+45	600	1561013244	CMakeFiles/native-lib.dir/native-lib.cpp.o	b4bd814c24fb255c
+600	1177	1561013244	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	10eee25a98fc63db
+13	374	1561015448	CMakeFiles/native-lib.dir/native-lib.cpp.o	b4bd814c24fb255c
+374	755	1561015449	/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	10eee25a98fc63db

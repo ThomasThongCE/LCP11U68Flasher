@@ -1,0 +1,41 @@
+{
+  "stringTable": {
+    "0": "/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/.externalNativeBuild/cmake/debug/x86_64",
+    "1": "--target=x86_64-none-linux-android23 --gcc-toolchain=/home/thomasthong/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/thomasthong/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dnative_lib_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -fno-addrsig -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -Xlint:unchecked -O0 -fno-limit-debug-info -fPIC"
+  },
+  "buildFiles": [
+    "/home/thomasthong/Android/Sdk/ndk-bundle/build/cmake/platforms.cmake",
+    "/home/thomasthong/Android/Sdk/ndk-bundle/build/cmake/android.toolchain.cmake",
+    "/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/home/thomasthong/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build \"/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/.externalNativeBuild/cmake/debug/x86_64\" --target clean"
+  ],
+  "libraries": {
+    "native-lib-Debug-x86_64": {
+      "buildCommand": "/home/thomasthong/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build \"/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/.externalNativeBuild/cmake/debug/x86_64\" --target native-lib",
+      "buildType": "debug",
+      "toolchain": "1965074949",
+      "abi": "x86_64",
+      "artifactName": "native-lib",
+      "files": [
+        {
+          "src": "/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/src/main/cpp/native-lib.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/debug/obj/x86_64/libnative-lib.so"
+    }
+  },
+  "toolchains": {
+    "1965074949": {
+      "cppCompilerExecutable": "/home/thomasthong/Android/Sdk/ndk-bundle/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

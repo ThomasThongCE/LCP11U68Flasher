@@ -1,0 +1,18 @@
+{
+  "buildFiles": [
+    "/home/thomasthong/Android/Sdk/ndk-bundle/build/cmake/platforms.cmake",
+    "/home/thomasthong/Android/Sdk/ndk-bundle/build/cmake/android.toolchain.cmake",
+    "/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/home/thomasthong/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build \"/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/.externalNativeBuild/cmake/release/arm64-v8a\" --target clean"
+  ],
+  "libraries": {
+    "native-lib-Release-arm64-v8a": {
+      "artifactName": "native-lib",
+      "buildCommand": "/home/thomasthong/Android/Sdk/cmake/3.10.2.4988404/bin/cmake --build \"/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/.externalNativeBuild/cmake/release/arm64-v8a\" --target native-lib",
+      "abi": "arm64-v8a",
+      "output": "/home/thomasthong/AndroidStudioProjects/Nfc_programmer/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so"
+    }
+  }
+}
