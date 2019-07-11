@@ -18,14 +18,14 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('/home/thomasthong/Downloads/yellow_fin/aosp/build/target/product/security/platform')
+            storeFile file('/home/data/ThomasThong/yellow_fin/build/target/product/security/platform')
             storePassword 'android'
             keyAlias 'platform'
             keyPassword 'android'
         }
 
         debug {
-            storeFile file('/home/thomasthong/Downloads/yellow_fin/aosp/build/target/product/security/platform')
+            storeFile file('/home/data/ThomasThong/yellow_fin/build/target/product/security/platform')
             storePassword 'android'
             keyAlias 'platform'
             keyPassword 'android'

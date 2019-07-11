@@ -1,9 +1,11 @@
 package com.example.nfc_programmer;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.hardware.usb.UsbManager;
 import android.os.storage.StorageManager;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,8 +30,11 @@ import static java.lang.Class.forName;
  */
 public class MainActivity extends AppCompatActivity {
 
-    Button btn;
+    Button flash_btn, choose_btn;
+    TextView file_text;
     ResetUtil reset;
+
+    private String FWPath = "/storage/emulated/0/lpc11u_surisdk.bin";
     private Runnable flash ;
     private Class storageManagerClass = null, volumeInfoClass = null;
     private Method unmount = null, findVolumeByUuid = null, getId = null;
@@ -39,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     final static String TAG = "nfc_programmer_main";
     final static String UUID = "0000-0000";
+    final static int FILE_REQUEST = 7;
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -158,7 +164,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         reset = new ResetUtil();
-        btn = findViewById(R.id.flash_btn);
+        flash_btn = findViewById(R.id.flash_btn);
+        choose_btn = findViewById(R.id.choose_btn);
+        file_text = findViewById(R.id.file_text);
+        file_text.setText(FWPath);
 
         // Init private method which use to detect and unmount lpc partition
         mStorageManager = getApplicationContext().getSystemService(StorageManager.class);
@@ -193,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
           Create 2 thread, one for flashing and other for kill flashing thread (timeout)
           Flashing thread is using flashTask class
          */
-        btn.setOnClickListener(new View.OnClickListener() {
+        flash_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(),"flash begin",Toast.LENGTH_SHORT).show();
@@ -209,6 +218,16 @@ public class MainActivity extends AppCompatActivity {
                 },10, TimeUnit.SECONDS);
             }
         });
+
+        choose_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setType("*/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent, FILE_REQUEST);
+            }
+        });
     }
 
     /**
@@ -219,6 +238,20 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         unregisterReceiver(reset.getUsbBroadcastReceiver());
         executor.shutdownNow();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        switch (requestCode){
+            case FILE_REQUEST:
+                if (resultCode == RESULT_OK){
+                    String Path = data.getData().getPath();
+
+                    file_text.setText(Path);
+                    FWPath = Path;
+                }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     /**
