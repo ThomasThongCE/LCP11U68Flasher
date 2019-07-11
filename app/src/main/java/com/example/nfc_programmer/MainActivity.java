@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.hardware.usb.UsbManager;
+import android.net.Uri;
 import android.os.storage.StorageManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -245,10 +246,9 @@ public class MainActivity extends AppCompatActivity {
         switch (requestCode){
             case FILE_REQUEST:
                 if (resultCode == RESULT_OK){
-                    String Path = data.getData().getPath();
-
-                    file_text.setText(Path);
-                    FWPath = Path;
+                    String path = GetPath.getPath(this, data.getData());
+                    file_text.setText(path);
+                    FWPath = path;
                 }
         }
         super.onActivityResult(requestCode, resultCode, data);
