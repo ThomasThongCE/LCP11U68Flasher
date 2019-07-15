@@ -29,7 +29,7 @@ public class ResetUtil {
     /**
      * Init driver file path and token object for verify mcu mode
      */
-    ResetUtil(){
+    ResetUtil() {
         file = new File(ResetFilePath);
         bootToken = new Object();
         resetToken = new Object();
@@ -37,6 +37,7 @@ public class ResetUtil {
 
     /**
      * Drive mcu into boot mode without verify (<i>wait</i> mechanic)
+     *
      * @throws IOException
      */
     public void enterProgModeNonBlock() throws IOException {
@@ -47,6 +48,7 @@ public class ResetUtil {
 
     /**
      * Drive mcu into normal mode without verify (<i>wait</i> mechanic)
+     *
      * @throws IOException
      */
     public void enterNormalModeNonBlock() throws IOException {
@@ -57,45 +59,50 @@ public class ResetUtil {
 
     /**
      * Drive mcu into boot mode with verify (<i>wait</i> mechanic) from broadcast receiver
+     *
      * @return <b>true</b> if reset into bootmode success, <b>false</b> if <i>wait()</i> timeout.
      * @throws IOException
      * @throws InterruptedException
      */
     public boolean enterProgMode() throws IOException, InterruptedException {
+        bootFlag = false;
         enterProgModeNonBlock();
-        synchronized (bootToken){
+        synchronized (bootToken) {
             bootToken.wait(1000);
         }
         if (bootFlag) {
             Log.i(TAG, "enter programming mode");
             bootFlag = false;
             return true;
-        }else
+        } else
             return false;
     }
 
     /**
      * Drive mcu into normal mode with verify (<i>wait</i> mechanic) from broadcast receiver
+     *
      * @return <b>true</b> if reset into bootmode success, <b>false</b> if <i>wait()</i> timeout.
      * @throws IOException
      * @throws InterruptedException
      */
     public boolean enterNormalMode() throws IOException, InterruptedException {
+        resetFlag = false;
         enterNormalModeNonBlock();
-        synchronized (resetToken){
+        synchronized (resetToken) {
             resetToken.wait(1000);
         }
         if (resetFlag) {
-            Log.i (TAG, "enter normal mode");
+            Log.i(TAG, "enter normal mode");
             resetFlag = false;
             return true;
-        }else
+        } else
             return false;
 
     }
 
     /**
      * Get broadcast receiver
+     *
      * @return broadcast receiver
      */
     public BroadcastReceiver getUsbBroadcastReceiver() {

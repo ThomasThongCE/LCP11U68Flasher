@@ -47,7 +47,7 @@ char findSdx()
  */
 extern "C"
 JNIEXPORT jint JNICALL
-Java_com_example_nfc_1programmer_MainActivity_program(JNIEnv *env, jobject instance,
+Java_com_example_nfc_1programmer_FlashTask_program(JNIEnv *env, jobject instance,
                                                     jstring path_) {
     DIR *dir;
     FILE *srcFile;
